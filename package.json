@@ -5,6 +5,7 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
+    "postinstall": "grep url .gitmodules | sed 's/.*= //' | while read url; do git clone $url; done",
     "link": "@mauron85/react-native-background-geolocation/scripts/postlink.js",
     "unlink": "@mauron85/react-native-background-geolocation/scripts/postunlink.js",
     "test": "echo \"Error: no test specified\" && exit 1"

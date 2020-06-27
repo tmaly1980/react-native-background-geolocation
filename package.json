@@ -5,7 +5,7 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "postinstall": "git clone https://github.com/mauron85/background-geolocation-ios.git ios/common; git clone https://github.com/tmaly1980/background-geolocation-android.git android/common",
+    "postinstall": "rm -rf ios/common; git clone https://github.com/mauron85/background-geolocation-ios.git ios/common; rm -rf android/common; git clone https://github.com/tmaly1980/background-geolocation-android.git android/common",
     "link": "@mauron85/react-native-background-geolocation/scripts/postlink.js",
     "unlink": "@mauron85/react-native-background-geolocation/scripts/postunlink.js",
     "test": "echo \"Error: no test specified\" && exit 1"
